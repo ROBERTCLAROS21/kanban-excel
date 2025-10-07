@@ -1,308 +1,223 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso: Gestión Visual de Proyectos con Kanban en Excel</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-        }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 350px;
-            max-height: 400px;
-        }
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 400px;
-            }
-        }
-        .kpi-card {
-            background-color: #FFFFEA;
-            border-left: 5px solid #00CECB;
-        }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -31px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: #FF5E5B;
-            border: 3px solid #FFFFEA;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capacitación Corporativa: Gestión Visual de Proyectos con Kanban en Excel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+    }
+    .chart-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      height: 350px;
+    }
+    @media (min-width: 768px) {
+      .chart-container {
+        height: 400px;
+      }
+    }
+    .kpi-card {
+      background-color: #f1f5f9;
+      border-left: 4px solid #2563eb;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -31px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #2563eb;
+      border: 3px solid #f9fafb;
+    }
+  </style>
 </head>
 <body class="text-gray-800">
 
-    <header class="bg-[#FF5E5B] text-white text-center p-12">
-        <h1 class="text-4xl md:text-5xl font-black tracking-tight">Transforma tu Gestión de Proyectos</h1>
-        <p class="text-xl mt-4 max-w-3xl mx-auto">Descubre cómo la gestión visual con Kanban en Excel puede revolucionar tu productividad y la de tu equipo.</p>
-    </header>
+  <header class="bg-blue-700 text-white text-center p-12">
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Gestión Visual de Proyectos con Kanban en Excel</h1>
+    <p class="text-xl mt-4 max-w-3xl mx-auto">Capacitación intensiva orientada a la mejora de la productividad, el enfoque estratégico y la gestión efectiva de tareas en entornos corporativos.</p>
+  </header>
 
-    <main class="max-w-6xl mx-auto p-4 md:p-8">
+  <main class="max-w-6xl mx-auto p-4 md:p-8">
 
-        <section id="problema" class="my-16">
-            <h2 class="text-3xl font-bold text-center mb-2">¿Tu día a día es un caos de tareas?</h2>
-            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Si te identificas con esto, no estás solo. La falta de visibilidad es el principal ladrón de la productividad.</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <span class="text-6xl">🤯</span>
-                    <h3 class="text-xl font-bold mt-4">Tareas Interminables</h3>
-                    <p class="text-gray-600 mt-2">Sientes que trabajas sin parar pero el progreso es invisible.</p>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <span class="text-6xl">💬</span>
-                    <h3 class="text-xl font-bold mt-4">Comunicación Perdida</h3>
-                    <p class="text-gray-600 mt-2">El estado de los proyectos se pierde entre emails y mensajes.</p>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <span class="text-6xl">🚦</span>
-                    <h3 class="text-xl font-bold mt-4">Prioridades Confusas</h3>
-                    <p class="text-gray-600 mt-2">Es difícil saber qué es realmente urgente y qué puede esperar.</p>
-                </div>
+    <section id="introduccion" class="my-16 text-center">
+      <h2 class="text-3xl font-bold mb-4">Contexto y Propósito</h2>
+      <p class="text-gray-600 max-w-3xl mx-auto">En entornos de alta exigencia, la visibilidad y el control del trabajo son factores críticos. Esta capacitación permite a los equipos adoptar prácticas de gestión visual basadas en el método Kanban, utilizando Excel como herramienta accesible y versátil.</p>
+    </section>
+
+    <section id="desafios" class="my-16">
+      <h2 class="text-3xl font-bold text-center mb-8">Desafíos Frecuentes en la Gestión de Proyectos</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <h3 class="text-xl font-bold mt-2">Falta de Visibilidad</h3>
+          <p class="text-gray-600 mt-2">Las tareas y avances se dispersan entre múltiples herramientas, dificultando la toma de decisiones.</p>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <h3 class="text-xl font-bold mt-2">Priorización Inconsistente</h3>
+          <p class="text-gray-600 mt-2">No siempre se distinguen claramente las actividades críticas de las secundarias.</p>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <h3 class="text-xl font-bold mt-2">Comunicación Fragmentada</h3>
+          <p class="text-gray-600 mt-2">Los equipos enfrentan dificultades para mantener la alineación y el seguimiento de avances.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="solucion" class="my-16 bg-white p-8 rounded-lg shadow-lg">
+      <h2 class="text-3xl font-bold text-center mb-4">Solución Propuesta: Gestión Visual con Kanban en Excel</h2>
+      <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">Aplicar Kanban permite visualizar el flujo de trabajo, identificar cuellos de botella y optimizar procesos. Al integrar esta metodología en Excel, se facilita la adopción organizacional sin necesidad de herramientas adicionales.</p>
+      <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-center font-semibold">
+        <div class="w-full md:w-1/4 p-6 bg-gray-100 rounded-lg shadow">Por Hacer</div>
+        <div class="text-4xl text-blue-600 hidden md:block">→</div>
+        <div class="text-4xl text-blue-600 md:hidden">↓</div>
+        <div class="w-full md:w-1/4 p-6 bg-blue-100 rounded-lg shadow">En Proceso</div>
+        <div class="text-4xl text-blue-600 hidden md:block">→</div>
+        <div class="text-4xl text-blue-600 md:hidden">↓</div>
+        <div class="w-full md:w-1/4 p-6 bg-blue-600 text-white rounded-lg shadow">Completado</div>
+      </div>
+    </section>
+
+    <section id="competencias" class="my-16">
+      <h2 class="text-3xl font-bold text-center mb-12">Competencias Desarrolladas</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="p-6">
+          <p class="text-lg text-gray-700 mb-6">Al finalizar esta capacitación, los participantes habrán desarrollado competencias aplicables directamente en sus roles organizacionales:</p>
+          <ul class="space-y-4">
+            <li class="flex items-start"><span class="text-blue-600 font-bold text-xl mr-3">✔</span><span><strong>Gestión Visual:</strong> Representar el flujo de trabajo para priorizar y optimizar actividades.</span></li>
+            <li class="flex items-start"><span class="text-blue-600 font-bold text-xl mr-3">✔</span><span><strong>Diseño de Tableros:</strong> Construir sistemas Kanban funcionales y adaptables a distintos contextos.</span></li>
+            <li class="flex items-start"><span class="text-blue-600 font-bold text-xl mr-3">✔</span><span><strong>Automatización y Seguimiento:</strong> Incorporar fórmulas, filtros y colores condicionales para control visual.</span></li>
+            <li class="flex items-start"><span class="text-blue-600 font-bold text-xl mr-3">✔</span><span><strong>Evaluación y Mejora Continua:</strong> Establecer métricas e indicadores para la toma de decisiones informadas.</span></li>
+          </ul>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-lg">
+          <div class="chart-container">
+            <canvas id="competenciasChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="modulos" class="my-16">
+      <h2 class="text-3xl font-bold text-center mb-12">Estructura de la Capacitación (7 Horas)</h2>
+      <div class="relative max-w-2xl mx-auto pl-8">
+        <div class="absolute left-0 top-0 bottom-0 w-1 bg-gray-200 rounded"></div>
+        <div class="mb-10 relative timeline-item">
+          <h4 class="font-semibold text-lg text-blue-700">Módulos 1 y 2 (90 min): Fundamentos</h4>
+          <p class="text-gray-600">Introducción a los principios del método Kanban y los beneficios de la gestión visual.</p>
+        </div>
+        <div class="mb-10 relative timeline-item">
+          <h4 class="font-semibold text-lg text-blue-700">Módulos 3 y 4 (2h 45min): Construcción del Tablero</h4>
+          <p class="text-gray-600">Desarrollo práctico del tablero en Excel con automatizaciones y formatos condicionales.</p>
+        </div>
+        <div class="mb-10 relative timeline-item">
+          <h4 class="font-semibold text-lg text-blue-700">Módulo 5 (1h): Personalización</h4>
+          <p class="text-gray-600">Adaptación de tableros a distintas áreas funcionales y buenas prácticas de implementación.</p>
+        </div>
+        <div class="mb-10 relative timeline-item">
+          <h4 class="font-semibold text-lg text-blue-700">Módulo 6 (1h): Aplicación en Caso Real</h4>
+          <p class="text-gray-600">Simulación de un proyecto interno aplicando todos los conocimientos adquiridos.</p>
+        </div>
+        <div class="relative timeline-item">
+          <h4 class="font-semibold text-lg text-blue-700">Módulo 7 (45 min): Evaluación y Cierre</h4>
+          <p class="text-gray-600">Revisión de competencias adquiridas y plan de acción para la implementación en la organización.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="herramientas" class="my-16">
+      <h2 class="text-3xl font-bold text-center mb-12">Recursos y Herramientas de Aplicación</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <div class="chart-container h-64 md:h-80">
+            <canvas id="plantillasChart"></canvas>
+          </div>
+        </div>
+        <div>
+          <p class="text-lg text-gray-700 mb-6">Cada participante recibirá plantillas diseñadas para diferentes niveles de complejidad, facilitando la aplicación inmediata en sus proyectos.</p>
+          <div class="space-y-4">
+            <div class="kpi-card p-4 rounded-lg shadow-sm">
+              <h4 class="font-bold">Plantilla Base</h4>
+              <p class="text-sm text-gray-600">Incluye las columnas y campos esenciales para el control inicial de proyectos.</p>
             </div>
-        </section>
-
-        <section id="solucion" class="my-16 bg-white p-8 rounded-lg shadow-lg">
-            <h2 class="text-3xl font-bold text-center mb-4">La Solución: ¡Deja de Empezar y Empieza a TERMINAR!</h2>
-            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">El método Kanban te da el poder de visualizar tu flujo de trabajo. Usando una herramienta que ya dominas, Excel, crearemos un sistema que pone orden en el caos y potencia el enfoque de tu equipo.</p>
-            <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-center font-bold">
-                <div class="w-full md:w-1/4 p-6 bg-gray-100 rounded-lg shadow">POR HACER 📝</div>
-                <div class="text-4xl text-[#00CECB] hidden md:block">→</div>
-                 <div class="text-4xl text-[#00CECB] md:hidden">↓</div>
-                <div class="w-full md:w-1/4 p-6 bg-[#FFED66] rounded-lg shadow">EN PROCESO ⚙️</div>
-                <div class="text-4xl text-[#00CECB] hidden md:block">→</div>
-                 <div class="text-4xl text-[#00CECB] md:hidden">↓</div>
-                <div class="w-full md:w-1/4 p-6 bg-[#00CECB] text-white rounded-lg shadow">HECHO ✅</div>
+            <div class="kpi-card p-4 rounded-lg shadow-sm">
+              <h4 class="font-bold">Plantilla Intermedia</h4>
+              <p class="text-sm text-gray-600">Integra contadores automáticos y colores condicionales para priorización visual.</p>
             </div>
-        </section>
-
-        <section id="competencias" class="my-16">
-            <h2 class="text-3xl font-bold text-center mb-12">Competencias Clave que Dominarás</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div class="p-6">
-                    <p class="text-lg text-gray-700 mb-6">Este curso no es solo teórico. Saldrás con habilidades prácticas y aplicables de inmediato. Al finalizar, serás capaz de transformar una simple hoja de cálculo en un potente centro de mando para tus proyectos.</p>
-                    <ul class="space-y-4">
-                        <li class="flex items-start"><span class="text-[#FF5E5B] font-bold text-xl mr-3">✔</span><span><strong class="text-gray-900">Visualizar y Optimizar:</strong> Identificarás cuellos de botella en tus procesos al instante.</span></li>
-                        <li class="flex items-start"><span class="text-[#FF5E5B] font-bold text-xl mr-3">✔</span><span><strong class="text-gray-900">Diseñar y Construir:</strong> Crearás tableros Kanban funcionales y adaptados a cualquier equipo o proyecto.</span></li>
-                        <li class="flex items-start"><span class="text-[#FF5E5B] font-bold text-xl mr-3">✔</span><span><strong class="text-gray-900">Automatizar y Simplificar:</strong> Usarás fórmulas, filtros y colores para que el tablero trabaje para ti.</span></li>
-                        <li class="flex items-start"><span class="text-[#FF5E5B] font-bold text-xl mr-3">✔</span><span><strong class="text-gray-900">Medir y Mejorar:</strong> Implementarás indicadores para tomar decisiones basadas en datos reales.</span></li>
-                    </ul>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-lg">
-                    <div class="chart-container">
-                        <canvas id="competenciasChart"></canvas>
-                    </div>
-                </div>
+            <div class="kpi-card p-4 rounded-lg shadow-sm">
+              <h4 class="font-bold">Plantilla Avanzada</h4>
+              <p class="text-sm text-gray-600">Dashboard con indicadores clave y métricas de desempeño de proyectos.</p>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section id="modulos" class="my-16">
-            <h2 class="text-3xl font-bold text-center mb-12">Nuestra Hoja de Ruta: 7 Horas de Transformación</h2>
-            <div class="relative max-w-2xl mx-auto pl-8">
-                <div class="absolute left-0 top-0 bottom-0 w-1 bg-gray-200 rounded"></div>
-                <div class="mb-10 relative timeline-item">
-                    <h4 class="font-bold text-lg text-[#FF5E5B]">Módulos 1 y 2: Los Cimientos (90 min)</h4>
-                    <p class="text-gray-600">Introducción a Kanban y los fundamentos de la gestión visual. Entenderás el "porqué" detrás del método.</p>
-                </div>
-                <div class="mb-10 relative timeline-item">
-                    <h4 class="font-bold text-lg text-[#FF5E5B]">Módulos 3 y 4: Construcción en Excel (2h 45min)</h4>
-                    <p class="text-gray-600">¡Manos a la obra! Taller práctico para diseñar tu tablero desde cero, con automatizaciones y formato condicional.</p>
-                </div>
-                <div class="mb-10 relative timeline-item">
-                    <h4 class="font-bold text-lg text-[#FF5E5B]">Módulo 5: Personalización y Buenas Prácticas (1h)</h4>
-                    <p class="text-gray-600">Aprende a adaptar el tablero a tu área (Marketing, TI, Ventas...) y a medir lo que realmente importa.</p>
-                </div>
-                <div class="mb-10 relative timeline-item">
-                    <h4 class="font-bold text-lg text-[#FF5E5B]">Módulo 6: Simulación Real (1h)</h4>
-                    <p class="text-gray-600">En equipo, gestionarás un proyecto real de la empresa, aplicando todo lo aprendido en un reto dinámico.</p>
-                </div>
-                <div class="relative timeline-item">
-                    <h4 class="font-bold text-lg text-[#FF5E5B]">Módulo 7: Evaluación y Cierre (45 min)</h4>
-                    <p class="text-gray-600">Consolida tus competencias y define tus próximos pasos para implementar Kanban con éxito.</p>
-                </div>
-            </div>
-        </section>
+    <section id="cta" class="my-16 bg-blue-700 text-white rounded-lg shadow-xl p-8 md:p-12 text-center">
+      <h2 class="text-3xl md:text-4xl font-extrabold">Impulsa la Productividad y el Enfoque de tu Equipo</h2>
+      <p class="mt-4 max-w-2xl mx-auto">Con esta capacitación, su organización podrá implementar prácticas de gestión visual que optimicen la coordinación, priorización y ejecución de tareas.</p>
+      <div class="mt-8 flex flex-wrap justify-center items-center gap-6 font-semibold text-gray-800">
+        <div class="bg-white p-4 rounded-lg shadow">🗓️ Duración: 7 horas</div>
+        <div class="bg-white p-4 rounded-lg shadow">💻 Modalidad: Presencial o Virtual</div>
+      </div>
+    </section>
 
-        <section id="herramientas" class="my-16">
-            <h2 class="text-3xl font-bold text-center mb-12">Más que Teoría: Herramientas Prácticas que te Llevarás</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <div class="chart-container h-64 md:h-80">
-                         <canvas id="plantillasChart"></canvas>
-                    </div>
-                </div>
-                <div>
-                     <p class="text-lg text-gray-700 mb-6">Finalizarás el curso con un arsenal de recursos listos para implementar. No solo te llevarás el conocimiento, sino también las herramientas para aplicarlo desde el primer día.</p>
-                    <div class="space-y-4">
-                        <div class="kpi-card p-4 rounded-lg shadow-sm">
-                            <h4 class="font-bold">Plantilla Base</h4>
-                            <p class="text-sm text-gray-600">Ideal para empezar. Con las columnas y campos esenciales para cualquier proyecto.</p>
-                        </div>
-                        <div class="kpi-card p-4 rounded-lg shadow-sm">
-                            <h4 class="font-bold">Plantilla Intermedia</h4>
-                            <p class="text-sm text-gray-600">Incluye filtros, contadores automáticos y colores condicionales para un seguimiento inteligente.</p>
-                        </div>
-                        <div class="kpi-card p-4 rounded-lg shadow-sm">
-                            <h4 class="font-bold">Plantilla Avanzada</h4>
-                            <p class="text-sm text-gray-600">Un dashboard completo con porcentajes de avance e indicadores de tareas atrasadas.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  </main>
 
-        <section id="cta" class="my-16 bg-[#00CECB] text-white rounded-lg shadow-xl p-8 md:p-12 text-center">
-            <h2 class="text-3xl md:text-4xl font-black">Lleva tu Gestión de Proyectos al Siguiente Nivel</h2>
-            <p class="mt-4 max-w-2xl mx-auto">Esta es tu oportunidad para adquirir una habilidad clave que impactará directamente en tu productividad y en los resultados de tu equipo. Los cupos son limitados para garantizar una experiencia personalizada.</p>
-            <div class="mt-8 flex flex-wrap justify-center items-center gap-6 font-bold text-gray-800">
-                <div class="bg-white p-4 rounded-lg shadow">🗓️ Duración: 7 horas</div>
-                <div class="bg-white p-4 rounded-lg shadow">💻 Modalidad: Presencial o Virtual</div>
-                
-            </div>
-            
-        </section>
+  <footer class="text-center p-6 bg-gray-800 text-white">
+    <p>&copy; 2025 RobertClaros | Programa de Capacitación Corporativa</p>
+  </footer>
 
-    </main>
+  <script>
+    const competenciasData = {
+      labels: ['Gestión Visual', 'Diseño de Tableros', 'Automatización', 'Colaboración', 'Mejora Continua'],
+      datasets: [{
+        label: 'Nivel de Competencia',
+        data: [100, 95, 90, 90, 85],
+        fill: true,
+        backgroundColor: 'rgba(37, 99, 235, 0.2)',
+        borderColor: '#2563eb',
+        pointBackgroundColor: '#2563eb'
+      }]
+    };
+    new Chart(document.getElementById('competenciasChart'), {
+      type: 'radar',
+      data: competenciasData,
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+    });
 
-    <footer class="text-center p-6 bg-gray-800 text-white">
-        <p>&copy; 2025 RobertClaros. Todos los derechos reservados.</p>
-    </footer>
-
-    <script>
-        const tooltipTitleCallback = {
-            plugins: {
-                tooltip: {
-                    callbacks: {
-                        title: function(tooltipItems) {
-                            const item = tooltipItems[0];
-                            let label = item.chart.data.labels[item.dataIndex];
-                            if (Array.isArray(label)) {
-                              return label.join(' ');
-                            } else {
-                              return label;
-                            }
-                        }
-                    }
-                }
-            }
-        };
-
-        const competenciasData = {
-            labels: ['Visualizar Flujo', 'Diseñar Tableros', 'Automatizar', 'Mejorar Colaboración', 'Medir y Mejorar'],
-            datasets: [{
-                label: 'Nivel de Dominio Adquirido',
-                data: [100, 100, 90, 95, 85],
-                fill: true,
-                backgroundColor: 'rgba(0, 206, 203, 0.2)',
-                borderColor: '#00CECB',
-                pointBackgroundColor: '#00CECB',
-                pointBorderColor: '#fff',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: '#00CECB'
-            }]
-        };
-
-        const competenciasCtx = document.getElementById('competenciasChart').getContext('2d');
-        new Chart(competenciasCtx, {
-            type: 'radar',
-            data: competenciasData,
-            options: {
-                ...tooltipTitleCallback,
-                maintainAspectRatio: false,
-                elements: {
-                    line: {
-                        borderWidth: 3
-                    }
-                },
-                scales: {
-                    r: {
-                        angleLines: {
-                            color: 'rgba(0, 0, 0, 0.1)'
-                        },
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.1)'
-                        },
-                        pointLabels: {
-                            font: {
-                                size: 12,
-                                weight: 'bold'
-                            },
-                            color: '#333'
-                        },
-                        ticks: {
-                           display: false,
-                           backdropColor: 'transparent',
-                           stepSize: 25
-                        }
-                    }
-                }
-            }
-        });
-
-        const plantillasData = {
-            labels: ['Plantilla Base', 'Plantilla Intermedia', 'Plantilla Avanzada'],
-            datasets: [{
-                label: 'Nivel de Funcionalidad',
-                data: [40, 75, 100],
-                backgroundColor: [
-                    'rgba(255, 237, 102, 0.7)',
-                    'rgba(0, 206, 203, 0.7)',
-                    'rgba(255, 94, 91, 0.7)'
-                ],
-                borderColor: [
-                    '#FFED66',
-                    '#00CECB',
-                    '#FF5E5B'
-                ],
-                borderWidth: 2
-            }]
-        };
-
-        const plantillasCtx = document.getElementById('plantillasChart').getContext('2d');
-        new Chart(plantillasCtx, {
-            type: 'bar',
-            data: plantillasData,
-            options: {
-                ...tooltipTitleCallback,
-                maintainAspectRatio: false,
-                indexAxis: 'y',
-                scales: {
-                    x: {
-                        beginAtZero: true,
-                         grid: {
-                            display: false
-                        }
-                    },
-                    y: {
-                         grid: {
-                            display: false
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        display: false
-                    }
-                }
-            }
-        });
-    </script>
+    const plantillasData = {
+      labels: ['Plantilla Base', 'Plantilla Intermedia', 'Plantilla Avanzada'],
+      datasets: [{
+        data: [40, 75, 100],
+        backgroundColor: ['#bfdbfe', '#60a5fa', '#1d4ed8'],
+        borderColor: ['#93c5fd', '#3b82f6', '#1e40af'],
+        borderWidth: 2
+      }]
+    };
+    new Chart(document.getElementById('plantillasChart'), {
+      type: 'bar',
+      data: plantillasData,
+      options: {
+        indexAxis: 'y',
+        plugins: { legend: { display: false } },
+        scales: { x: { beginAtZero: true } }
+      }
+    });
+  </script>
 
 </body>
 </html>
-
